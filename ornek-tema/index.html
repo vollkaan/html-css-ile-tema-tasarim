@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dac1b7d0ec.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&family=Lato:ital,wght@0,700;1,400&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Wordpress tema çalışması</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgb(255, 255, 255);
+        }
+
+        header a {
+            text-decoration: none;
+        }
+
+        .main-nav {
+            background-color: rgb(255, 255, 255);
+            height: 67px;
+            text-align: right;
+            width: calc(100% - 95px);
+            display: inline-block;
+        }
+
+        .main-nav a {
+            color: rgb(29, 35, 39);
+            margin-right: 11px;
+            margin-top: 14px;
+            font-size: 19px;
+            display: inline-block;
+        }
+
+        .main-nav a:hover {
+            color: #f8b044;
+            transition: all 0.3s;
+        }
+
+        .nav-item {
+            display: inline-block;
+        }
+
+        .nav-items {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .c-button {
+            color: black;
+            font-size: 21px;
+            background-color: #FCAF3B;
+            font-weight: 600;
+            padding: 9px 22px;
+            border-radius: 4px;
+        }
+
+        .c-button:hover {
+            background-color: #f5d8ae;
+            transition: all 0.6s;
+        }
+
+        .header-logo {
+            text-decoration: none;
+            color: black;
+            font-size: 22px;
+            font-weight: 600;
+            margin-left: 9px;
+        }
+
+        .title {   
+            height: 89vh;
+            background-image: url(img/dag_303856149.jpg);
+            background-size: cover;
+            background-size: top;
+        }
+
+        .title-main {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 600;
+            font-size: 70px;
+            z-index: 1;
+        }
+
+        .title-p {
+            margin: 0;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 22px;
+            line-height: 30px;
+            z-index: 1;
+        }
+
+        .cover {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #b1907d;
+            opacity: 0.7;
+        }
+
+        .main-logo {
+            position: relative;
+            width: 30px;
+            top: 8px;
+            left: 5px;
+        }
+
+        .icon {
+            height: 2px;
+            position: relative;
+            right: 10px;
+        }
+
+        .btn {
+            text-decoration: none;
+        }
+
+
+        .btn-item {
+            margin: 0; 
+            position: absolute;
+            top: 80%;
+            left: 38%;
+            text-decoration: none;
+            background-color: #f8b044;
+            color: #14171C;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 14px 18px;
+            border-radius: 2px;
+        }
+
+        .btn-item:hover {
+            background-color: #f1ba67;
+            transition: all 0.7s;
+        }
+
+        .btn-item-r {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            text-decoration: none;
+            background-color: #2B2B2B;
+            color: white;
+            font-weight: 600;
+            padding: 15px 27px;
+            border-radius: 2px;
+        }
+
+        .btn-item-r:hover {
+            background-color: #3d3d3d;
+            transition: all 0.7s;
+        }
+
+        .inner {
+            width: 100%;
+            margin-top: 80px;
+        }
+
+        .inner-left {
+            padding-left: 20px;
+        }
+
+        .inner-ce {
+            padding: 0 30px;
+        }
+
+        .inner-right {
+            padding-right: 20px;
+        }
+
+        .col {
+            width: 33.3333%;
+            float: left;
+            font-size: 25px;
+        }
+
+        .inner-header, .logo-inner {
+            text-align: center;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        @media (max-width:1310px) {
+            .title-main {
+                font-size: 44px;
+            }
+
+            .btn-item-r {
+                padding: 8px 10px;
+            }
+
+            .btn-item {
+                padding: 7px 9px;
+            }
+        }
+
+        @media (max-width:1113px) {
+            .title-main {
+                font-size: 35px;
+            }
+
+            .btn-item-r {
+                padding: 4px 5px;
+            }
+
+            .btn-item {
+                padding: 3px 5px;
+                left: 32%;
+
+            }
+        }
+
+        @media(max-width:812px) {
+            .title-main {
+                font-size: 24px;
+            }
+
+            .nav-item {
+                display: block;
+                text-align: center;
+                border-top: solid 2px #f8b044;
+            }
+
+            .c-button {
+                font-size: 12px;
+                padding: 2px 17px;
+            }
+
+            .btn-item {
+                left: 28%;
+            }
+        }
+
+        @media(max-width:600px) {
+            .title-main {
+                font-size: 16px;
+            }
+
+            .btn-item {
+                padding: 2px 2px;
+                border-radius: 1px;
+                font-weight: 100;
+                top: 90%;
+                left: 27%;
+            }
+
+            .btn-item-r {
+                padding: 3px 2px;
+                border-radius: 1px;
+                font-weight: 100;
+                top: 90%;
+            }
+
+            .title-p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="main-header">
+            <a href="">
+                <img class="main-logo" src="img/logo-agency.png" alt="">
+            </a>
+            <a class="header-logo" href="#">Neve</a>
+            <div class="main-nav">
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">PORTOFOLIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">PROJECT DETAILS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">BLOG</a>
+                        <i class="fas fa-search icon"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a class="c-button" href="#">Contact Now</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="title">
+            <h2 class="title-main">
+                Create and grow your
+                unique website today
+            </h2>
+            <p class="title-p">
+                Programmatically work but low hanging fruit so new economy cross-pollination. Quick sync new
+                economy onward and upward.
+            </p>
+            <div class="cover"></div>
+            <div class="btn">
+                <a class="btn-item" href="#">
+                    Learn More
+                </a>
+
+                <a class="btn-item-r" href="#">
+                    See All Demos
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="inner">
+            <div class="inner-left col">
+                <div class="logo-inner">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h3 class="inner-header">Fixed Price Projects</h3>
+                <p class="inner-header">Lorem ipsum dolor sit amet elit do, consectetur adipiscing, sed eiusmod tempor.
+                </p>
+            </div>
+            <div class="inner-ce col">
+                <div class="logo-inner">
+                    <i class="far fa-gem"></i>
+                </div>
+                <h3 class="inner-header">Receive on time</h3>
+                <p class="inner-header">Lorem ipsum dolor sit amet elit do, consectetur adipiscing, sed eiusmod tempor.
+                </p>
+            </div>
+            <div class="inner-right col">
+                <div class="logo-inner">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 class="inner-header">Fast work turnaround</h3>
+                <p class="inner-header">Lorem ipsum dolor sit amet elit do, consectetur adipiscing, sed eiusmod tempor.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
